@@ -37,13 +37,20 @@ export class GracefullyDegradingErrorBoundary extends Component<
     if (this.state.hasError) {
       // Render the current HTML content without hydration
       return (
-        <div
-          ref={this.contentRef}
-          suppressHydrationWarning
-          dangerouslySetInnerHTML={{
-            __html: this.contentRef.current?.innerHTML || "",
-          }}
-        />
+        <>
+          <div
+            ref={this.contentRef}
+            suppressHydrationWarning
+            dangerouslySetInnerHTML={{
+              __html: this.contentRef.current?.innerHTML || "",
+            }}
+          />
+          <div className="fixed bottom-0 left-0 right-0 bg-red-600 text-white py-4 px-6 text-center">
+            <p className="font-semibold">
+              An error occurred during page rendering
+            </p>
+          </div>
+        </>
       );
     }
 
