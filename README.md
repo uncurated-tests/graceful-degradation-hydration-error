@@ -5,3 +5,5 @@ This can happen if any type of `if (typeof "window" !== "undefined")` condition 
 [Demo](https://graceful-degradation-hydration-error.vercel.app/)
 
 [Error boundary code](https://github.com/uncurated-tests/graceful-degradation-hydration-error/blob/main/app/gracefully-degrading-error-boundary.tsx)
+
+[Explanation](https://x.com/cramforce/status/1845491853225062669)
